@@ -46,7 +46,7 @@ The CORTX deployment and configuration is a four-step procedure:
     ```
     yum install git yum-utils wget -y
     yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-    yum install docker-ce -y
+    yum install docker-ce docker-ce-cli containerd.io -y
     hostnamectl set-hostname --static --transient --pretty deploy-test.cortx.com
     sed -i 's/SELINUX=enforcing/SELINUX=disabled/' /etc/selinux/config
     ```
